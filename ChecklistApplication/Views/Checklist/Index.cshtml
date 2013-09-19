@@ -1,0 +1,69 @@
+﻿@model IEnumerable<ChecklistApplication.Models.Checklist>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Grade)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DepartingOrganization)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NewOrganization)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ForwardingAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GregTest)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DepartureDate)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Grade)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DepartingOrganization)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NewOrganization)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ForwardingAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GregTest)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DepartureDate)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ChecklistID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ChecklistID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ChecklistID })
+        </td>
+    </tr>
+}
+
+</table>

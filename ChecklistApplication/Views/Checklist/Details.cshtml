@@ -1,0 +1,64 @@
+﻿@model ChecklistApplication.Models.Checklist
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Checklist</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Grade)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Grade)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DepartingOrganization)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DepartingOrganization)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NewOrganization)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NewOrganization)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ForwardingAddress)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ForwardingAddress)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.GregTest)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.GregTest)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DepartureDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DepartureDate)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ChecklistID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
